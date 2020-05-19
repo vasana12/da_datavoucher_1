@@ -20,7 +20,7 @@ import matplotlib.pyplot as plt
 
 
 sstime = datetime.now()
-keyword1 = '몰카'
+keyword1 = '포도'
 
 
 channel = 'Naver Blog'

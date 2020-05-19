@@ -18,13 +18,13 @@ from datetime import datetime
 
 
 sstime = datetime.now()
-keyword1 = '신제품'
+keyword1 = '포도'
 
 channel = 'Naver Blog'
 
 
-startDate1 = '2019-01-01'
-endDate1 = '2020-04-27'
+startDate1 = '2010-01-01'
+endDate1 = '2019-12-31'
 
 
 ########################################################################################################################

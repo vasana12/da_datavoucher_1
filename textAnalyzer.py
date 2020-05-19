@@ -221,25 +221,25 @@ class TextAnalyzer:
         db_diction = {}
         compare_list = []  # 비교대상 년도의 빈도수를 뽑는다
         q = 0
-        for i in c:
+        # for i in c:
             # compare_dict = {'keyword': i[0], 'count':i[1], 'basic_differentiate': 1 if i[0] in basic_keylist else 0}       #기준년도 keylist 와 일치하는 keyword 를 찾고 식별값을 부여한다(일치: 1 불일치: 0)
             # compare_list.append(compare_dict)
-            compare_dict = {'keyword': i[0], 'count': i[1]}  # 기준년도 keylist 와 일치하는 keyword 를 찾고 식별값을 부여한다(일치: 1 불일치: 0)
-            compare_list.append(compare_dict)
-            # list에 추가한다.
+            # compare_dict = {'keyword': i[0], 'count': i[1]}  # 기준년도 keylist 와 일치하는 keyword 를 찾고 식별값을 부여한다(일치: 1 불일치: 0)
+            # compare_list.append(compare_dict)
+            # # list에 추가한다.
+            #
+            # # DB에 추가하기 위해 사전 {'K': 'V'} 사전 형태 만들어주기
+            # if q < 300:
+            #     db_diction[i[0]] = i[1]
+            # q += 1
 
-            # DB에 추가하기 위해 사전 {'K': 'V'} 사전 형태 만들어주기
-            if q < 300:
-                db_diction[i[0]] = i[1]
-            q += 1
-
-        db_diction = str(db_diction)
-        db_diction = db_diction.replace("'", "")
-        compare_list_table = pd.DataFrame(compare_list, columns=(
-            'keyword', 'count'))  # 엑셀에 저장하기 위해 keyword, count, basic_dfferntiate(식별값) 으로 칼럼을 만든다
-        compare_list_table.to_excel(
-            'keyword_sentiment_matching/' + self.keyword + 'num_list' + '_' + self.startDate + '~' + self.endDate + self.channel+'.xlsx',
-            encoding="utf-8", index=True)  # 엑셀에 저장한다. 대상 키워드와 비교년도 를 제목으로 하는 파일 생성
+        # db_diction = str(db_diction)
+        # db_diction = db_diction.replace("'", "")
+        # compare_list_table = pd.DataFrame(compare_list, columns=(
+        #     'keyword', 'count'))  # 엑셀에 저장하기 위해 keyword, count, basic_dfferntiate(식별값) 으로 칼럼을 만든다
+        # compare_list_table.to_excel(
+        #     'keyword_sentiment_matching/' + self.keyword + 'num_list' + '_' + self.startDate + '~' + self.endDate + self.channel+'.xlsx',
+        #     encoding="utf-8", index=True)  # 엑셀에 저장한다. 대상 키워드와 비교년도 를 제목으로 하는 파일 생성
 
         ##DB 에 키워드와 빈도수 리스트 저장하기
         db = 'crawl'

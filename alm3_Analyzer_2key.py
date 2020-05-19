@@ -16,14 +16,16 @@ import matplotlib.pyplot as plt
 
 ########################################################################################################################
 
-keyword1 = "스마트폰"
-keyword2 = "세븐나이츠"
+keyword1 = "사과"
+keyword2 = "포도"
 
-channel = 'Instagram'
+channel = 'Naver Blog'
+
+startDate1 = '2010-01-01'
+endDate1 = '2020-04-01'
 
 startDate = '2010-01-01'
 endDate = '2020-04-01'
-
 
 nUrlA = 1000
 nUrlB = 1000

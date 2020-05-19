@@ -1,4 +1,4 @@
-from polSeoul_category_NaverBlog_bae import *
+from polSeoul_category_NaverBlog import *
 import sys
 keyword = sys.argv[1]
 brand = sys.argv[2]
